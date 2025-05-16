@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue">#00568A</color>
+    <color name="light_blue">#F4FAFE</color>
+    <color name="light_red">#FFF4F6</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#ff9200</color>
+    <color name="hintText">#B9B7B7</color>
+    <color name="charcoal">#393940</color>
+    <color name="light_grey">#474747</color>
+    <color name="edittext_corner">#707070</color>
+    <color name="light_grey2">#515151</color>
+    <color name="dull_grey">#858380</color>
+    <color name="tab_inactive">#7E7E7E</color>
+    <color name="ripple_color">#C2CFE0</color>
+    <color name="light_gray">#707683</color>
+    <color name="grey_font">#707683</color>
+    <color name="strok_color">#A1A1A1</color>
+    <color name="greenish">#009B94</color>
+    <color name="teamlead_grey">#89888a</color>
+    <color name="leavesimg_background">#3c3434</color>
+    <color name="dark_grey">#474749</color>
+    <color name="dark_charcoal">#343434</color>
+    <color name="light_cahrcoal">#474749</color>
+
+    <color name="light_greenish">#D9F5F3</color>
+    <color name="red">#B00020</color>
+    <color name="stroke_color">#A1A1A1</color>
+    <color name="slightly_gray">#F6F6F6</color>
+    <color name="background_color">#E5E5E5</color>
+
+    <color name="present_green">#0D894F</color>
+    <color name="absent_red">#F04438</color>
+    <color name ="leaves_blue">#1FB6FF</color>
+    <color name="latearrival_yellow">#F7A91D</color>
+    <color name="maroon">#8a0000</color>
+    <color name="parrot_green">#00c349</color>
+
+
+    <color name="dark_green">#0C3F3C</color>
+    <color name="light_green">#2ED47A</color>
+    <color name="orange">#FFB923</color>
+    <color name="canvas__default__background_color">#f8f5f4</color>
+    <color name="transparent">#00000000</color>
+    <color name="dark_blue">#192A3E</color>
+    <color name="leaves_dashboard">#404041</color>
+    <color name="dark_purple">#0f0003</color>
+    <color name="theme_wala_kala">#474749</color>
+
+
+</resources>

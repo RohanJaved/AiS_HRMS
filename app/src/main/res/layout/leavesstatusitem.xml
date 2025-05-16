@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcvleaves"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70sdp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="24dp"
+        app:cardBackgroundColor="#474749"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/leavestitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="#ffffff"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Casual Leave" />
+            <TextView
+                android:id="@+id/leavesstatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="@color/present_green"
+                android:textSize="13dp"
+                android:layout_marginEnd="@dimen/_8sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:text="Approved" />
+
+            <TextView
+                android:id="@+id/attendancedate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:textColor="#9a9793"
+                android:textSize="12dp"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/leavestitle"
+                android:text="07-Mar-2023 - 09-Mar-2023" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:translationZ="5dp"
+        app:cardCornerRadius="@dimen/_30sdp"
+        android:elevation="0dp"
+        android:id="@+id/mcvleavesdate"
+        app:cardBackgroundColor="@color/yellow"
+        app:layout_constraintBottom_toBottomOf="@+id/mcvleaves"
+        app:layout_constraintEnd_toStartOf="@+id/mcvleaves"
+        app:layout_constraintStart_toStartOf="@+id/mcvleaves"
+        app:layout_constraintTop_toTopOf="@+id/mcvleaves">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+       <TextView
+           android:layout_width="@dimen/_18sdp"
+           android:layout_height="wrap_content"
+           android:id="@+id/txtapplieddate"
+           app:layout_constraintTop_toTopOf="parent"
+           app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintEnd_toEndOf="parent"
+           android:text ="06 Mar"
+           android:textAlignment="center"
+           android:textColor="@color/white"
+           android:fontFamily="@font/montserrat_semibold"
+           android:textSize="@dimen/_8sdp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

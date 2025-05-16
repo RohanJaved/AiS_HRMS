@@ -1,0 +1,27 @@
+
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' } // ✅ Add this line
+        gradlePluginPortal()
+    }
+}
+
+
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS) // This is the main cause of your error
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+        maven { url "https://repository.liferay.com/nexus/content/repositories/public/" }
+        maven { url "https://jcenter.bintray.com/" }
+
+    }
+}
+
+rootProject.name = "Android_HRMS_19"
+include ':app'
+

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/leavemanagement"
+    android:background="@color/charcoal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.leaves.LeaveManagement">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/leftGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/rightGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="20dp"
+        app:layout_constraintStart_toStartOf="parent" />
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="0dp"
+        android:layout_height="@dimen/_70sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:id="@+id/leavesdashboard"
+        app:cardElevation="@dimen/_4sdp"
+        app:layout_constraintStart_toEndOf="@+id/leftGuideline"
+        app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+        android:layout_marginTop="@dimen/_22sdp"
+        app:cardBackgroundColor="@color/leaves_dashboard">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:id="@+id/rvleavesdashboard"
+                android:visibility="visible"
+                android:orientation="horizontal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="@dimen/_70sdp"
+                tools:listitem="@layout/leavesdashboarditem"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtrecentleaves"
+        app:layout_constraintStart_toStartOf="@+id/leavesdashboard"
+        android:text="Recent leaves status"
+        android:textSize="@dimen/_12sdp"
+        app:layout_constraintTop_toBottomOf="@+id/applyleave"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_semibold"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:id="@+id/recentleavelayout"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/txtrecentleaves"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/leftGuideline"
+        app:layout_constraintEnd_toStartOf="@+id/rightGuideline">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/rvrecentleaves"
+            android:visibility="gone"
+            android:scrollbars="vertical"
+            android:padding="@dimen/_5sdp"
+            android:fadeScrollbars="false"
+            android:scrollbarSize="@dimen/_2sdp"
+            android:scrollbarThumbVertical="@color/strok_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+           app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/leavesstatusitem"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/norec"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="No Record Found"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="38dp"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+        android:id="@+id/applyleave"
+        android:layout_marginStart="@dimen/_80sdp"
+        android:layout_marginEnd="@dimen/_80sdp"
+        app:layout_constraintTop_toBottomOf="@+id/leavesdashboard"
+        android:background="@drawable/loginbuttonbackground"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:text="Apply Leave"
+            android:gravity="center"
+            android:textSize="13sp"
+            android:textColor="@color/dark_purple"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

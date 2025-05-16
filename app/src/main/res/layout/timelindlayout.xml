@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#000428">
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintGuide_percent="0.1"
+        android:orientation="vertical"
+        android:id="@+id/leftGuideline"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/rightGuideline"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9"
+        />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        android:text="Projects"
+        android:textColor="#9a9594"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:id="@+id/txtProject"
+        />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtProject"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        android:text="Timeline sheet"
+        android:textColor="#ffffff"
+        android:id="@+id/txtTimelinesheet"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="400dp"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        tools:listitem="@layout/timelinesheetitem"
+        app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/txtTimelinesheet"
+        android:layout_marginTop="10dp"
+        />
+   <ImageView
+       android:layout_height="50dp"
+       android:layout_width="50dp"
+       android:id="@+id/imgAdd"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:src="@drawable/add"
+       app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+       android:layout_marginBottom="10dp"
+       />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

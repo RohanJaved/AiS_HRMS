@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@color/charcoal"
+        android:id="@+id/profilefragment"
+        >
+
+        <ScrollView
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintEnd_toEndOf="@+id/rightGuideline">
+                <androidx.constraintlayout.widget.Guideline
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintGuide_percent="0.07"
+                    android:orientation="vertical"
+                    android:id="@+id/leftGuideline"
+                    />
+                <androidx.constraintlayout.widget.Guideline
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/rightGuideline"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.93"
+                    />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_height="150dp"
+            android:layout_width="0dp"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+            app:cardBackgroundColor="#474747"
+            app:cardCornerRadius="15dp"
+            android:layout_marginTop="20dp"
+            app:cardElevation="5dp"
+            android:id="@+id/cvEditProfile"
+            >
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                >
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:layout_height="60dp"
+                    android:layout_width="65dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginStart="20dp"
+                    android:tint="@color/yellow"
+                    android:src="@drawable/profileimage"
+                    android:id="@+id/imgprofilehome"
+                    android:transitionName="profiletransitionimage"
+                    app:shapeAppearanceOverlay="@style/CornerCut"
+                    />
+                <TextView
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/profileName"
+                    app:layout_constraintStart_toEndOf="@+id/imgprofilehome"
+                    app:layout_constraintTop_toTopOf="@+id/imgprofilehome"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:textColor="#ffffff"
+                    android:textSize="17dp"
+                    android:layout_marginStart="10dp"
+                    android:text="Rohan"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="110dp"
+                    android:layout_height="39dp"
+                    app:layout_constraintStart_toEndOf="@+id/imgprofilehome"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/profileName"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:text="EDIT PROFILE"
+                    android:textSize="11dp"
+                    android:textColor="#ff8c00"
+                    app:strokeColor="#ff8c00"
+                    app:strokeWidth="0.8dp"
+                    app:cornerRadius="2dp"
+                    android:id="@+id/btnEditProfile"
+                    />
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtemployeeId"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/cvEditProfile"
+            android:layout_marginTop="30dp"
+            android:text="Employee Id"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/employeeId"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/txtemployeeId"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="#7b7776"
+            android:textSize="14dp"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="12dp"
+            android:id="@+id/empidview"
+            app:layout_constraintTop_toBottomOf="@+id/employeeId"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintEnd_toEndOf="@+id/rightGuideline">
+            <View
+                android:layout_height="3dp"
+                android:layout_width="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="#7b7776"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/name"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/empidview"
+            android:layout_marginTop="30dp"
+            android:text="Name"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtname"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/name"
+            android:layout_marginTop="5dp"
+            android:text="5006"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="#7b7776"
+            android:textSize="14dp"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="12dp"
+            android:id="@+id/nameview"
+            app:layout_constraintTop_toBottomOf="@+id/txtname"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintEnd_toEndOf="@+id/rightGuideline">
+            <View
+                android:layout_height="3dp"
+                android:layout_width="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="#7b7776"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/designation"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/nameview"
+            android:layout_marginTop="30dp"
+            android:text="Designation"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtdesignation"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/designation"
+            android:layout_marginTop="5dp"
+            android:text="5006"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="#7b7776"
+            android:textSize="14dp"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="12dp"
+            android:id="@+id/designationview"
+            app:layout_constraintTop_toBottomOf="@+id/txtdesignation"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintEnd_toEndOf="@+id/rightGuideline">
+            <View
+                android:layout_height="3dp"
+                android:layout_width="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="#7b7776"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/department"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/designationview"
+            android:layout_marginTop="30dp"
+            android:text="Department"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtdepartment"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/department"
+            android:layout_marginTop="5dp"
+            android:text="5006"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="#7b7776"
+            android:textSize="14dp"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="12dp"
+            android:id="@+id/departmentview"
+            app:layout_constraintTop_toBottomOf="@+id/txtdepartment"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintEnd_toEndOf="@+id/rightGuideline">
+            <View
+                android:layout_height="3dp"
+                android:layout_width="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="#7b7776"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/reportingto"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/departmentview"
+            android:layout_marginTop="30dp"
+            android:text="Reporting To"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtreportingto"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/reportingto"
+            android:layout_marginTop="5dp"
+            android:text="5006"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="#7b7776"
+            android:textSize="14dp"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="12dp"
+            android:id="@+id/reportingtoview"
+            app:layout_constraintTop_toBottomOf="@+id/txtreportingto"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintEnd_toEndOf="@+id/rightGuideline">
+            <View
+                android:layout_height="3dp"
+                android:layout_width="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="#7b7776"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cellno"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/reportingtoview"
+            android:layout_marginTop="30dp"
+            android:text="Cell No"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:fontFamily="@font/montserrat_semibold"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtcellno"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintTop_toBottomOf="@+id/cellno"
+            android:layout_marginTop="5dp"
+            android:text="5006"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="#7b7776"
+            android:textSize="14dp"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:id="@+id/cellnoview"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@+id/txtcellno"
+            app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+            app:layout_constraintEnd_toEndOf="@+id/rightGuideline">
+            <View
+                android:layout_height="3dp"
+                android:layout_width="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:background="#7b7776"
+                />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.appinsnap.aishrm",
+  "variantName": "pre_prodRelease",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 7,
+      "versionName": "1.0.9",
+      "outputFile": "AISHRMS_V1.0.9-28111729-pre_prod-release.apk"
+    }
+  ],
+  "elementType": "File"
+}

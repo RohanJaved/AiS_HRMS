@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/arrowimg"
+        app:layout_constraintBottom_toBottomOf="@id/mcvemployeestrength"
+        app:layout_constraintTop_toTopOf="@+id/mcvemployeestrength"
+        android:src="@drawable/next"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:translationZ="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_2sdp"
+        />
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcvemployeestrength"
+        android:layout_width="match_parent"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_8sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="@dimen/_55sdp"
+        app:strokeColor="@color/yellow"
+        app:strokeWidth="@dimen/_1sdp"
+        app:cardBackgroundColor="@color/dark_charcoal"
+        app:cardCornerRadius="15dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/txttotalpresent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Present"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:textColor="@color/present_green"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txttotalabsent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Absent"
+                android:textColor="@color/absent_red"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintEnd_toStartOf="@+id/txttotalleaves"
+                app:layout_constraintStart_toEndOf="@+id/txttotalpresent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/txttotalleaves"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Leaves"
+                android:textColor="@color/leaves_blue"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintEnd_toStartOf="@+id/txtlatearrival"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/txttotalabsent"
+                app:layout_constraintTop_toTopOf="parent" />
+            <TextView
+                android:id="@+id/txtlatearrival"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="Late Arrival"
+                android:textColor="@color/latearrival_yellow"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txttotalleaves"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+
+
+            <TextView
+                android:id="@+id/txttotalpresentcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="@+id/txttotalpresent"
+                app:layout_constraintEnd_toEndOf="@+id/txttotalpresent"
+                app:layout_constraintTop_toBottomOf="@+id/txttotalleaves" />
+
+            <TextView
+                android:id="@+id/txttotalabsentcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="0"
+                android:textColor="@color/white"
+
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/txttotalabsent"
+                app:layout_constraintStart_toStartOf="@+id/txttotalabsent"
+                app:layout_constraintTop_toBottomOf="@+id/txttotalleaves"/>
+            <TextView
+                android:id="@+id/txttotalleavescount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="0"
+                android:textColor="@color/white"
+
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/txttotalleaves"
+                app:layout_constraintStart_toStartOf="@+id/txttotalleaves"
+                app:layout_constraintTop_toBottomOf="@+id/txttotalleaves" />
+            <TextView
+                android:id="@+id/txtlatearrivalcount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:text="0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/txtlatearrival"
+                app:layout_constraintStart_toStartOf="@+id/txtlatearrival"
+                app:layout_constraintTop_toBottomOf="@+id/txttotalleaves" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

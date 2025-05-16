@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "853546927544",
+    "project_id": "hrms-6f648",
+    "storage_bucket": "hrms-6f648.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853546927544:android:0701d61afe0d942cc07b4d",
+        "android_client_info": {
+          "package_name": "com.appinsnap.aishrm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853546927544-0ek6urbt4ln8qtmhka6png2ojh1ndbbc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAI33S0WqD53FuF-g0TGS9FvH_r218hSiA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853546927544-0ek6urbt4ln8qtmhka6png2ojh1ndbbc.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "853546927544-rimpaf74kinia2l36c1k4kktkkci8db2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.appinsnap.HRMS"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

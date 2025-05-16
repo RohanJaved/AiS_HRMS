@@ -1,0 +1,1738 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/homefragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/charcoal">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#393940"
+                    android:paddingBottom="@dimen/_14sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:context=".HomeFragment">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/leftGuideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_begin="20dp"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/rightGuideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_end="20dp"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="Welcome!"
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtdesignation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Android Dev!"
+                        android:textColor="@color/teamlead_grey"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintStart_toEndOf="@+id/leftGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+                    <TextView
+                        android:id="@+id/txttotalteammembers"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="1dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Total Team Members 30"
+                        android:textColor="@color/teamlead_grey"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                        app:layout_constraintStart_toEndOf="@+id/txtdesignation"
+                        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardAnnualLeave"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="@color/light_cahrcoal"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="@dimen/_10sdp"
+                        app:layout_constraintEnd_toStartOf="@+id/cardSickLeave"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/txttotalteammembers">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="7dp">
+
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/mcvannual"
+                                android:layout_width="@dimen/_26sdp"
+                                android:layout_height="@dimen/_26sdp"
+                                app:cardBackgroundColor="@color/leavesimg_background"
+                                app:cardCornerRadius="@dimen/_50sdp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/imageViewannual"
+                                        android:layout_width="@dimen/_13sdp"
+                                        android:layout_height="@dimen/_13sdp"
+                                        android:src="@drawable/annual"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:tint="@color/yellow" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                            <TextView
+                                android:id="@+id/txtAnnualLeave"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="Annual Leaves"
+                                android:textColor="@color/white"
+                                android:textSize="10dp"
+                                app:layout_constraintBottom_toTopOf="@+id/txtTotalAnnualLeave"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txtTotalAnnualLeave"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="--"
+                                android:textColor="@color/yellow"
+                                android:textSize="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/approvallayout"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_marginTop="20dp"
+                        app:cardBackgroundColor="#6a4044"
+                        app:cardCornerRadius="@dimen/_2sdp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toStartOf="@id/rightGuideline"
+                        app:layout_constraintStart_toEndOf="@+id/leftGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/materialCardView3">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:id="@+id/pendingapprovalnumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:text=""
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_10sdp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/pendingimg"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_15sdp"
+                                android:layout_marginEnd="10dp"
+                                android:src="@drawable/pending_img"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardSickLeave"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="#474749"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="@dimen/_10sdp"
+                        app:layout_constraintEnd_toStartOf="@+id/materialCardView3"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/cardAnnualLeave"
+                        app:layout_constraintTop_toBottomOf="@+id/txttotalteammembers">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="7dp">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/mcvsick"
+                                android:layout_width="@dimen/_26sdp"
+                                android:layout_height="@dimen/_26sdp"
+                                app:cardBackgroundColor="@color/leavesimg_background"
+                                app:cardCornerRadius="@dimen/_50sdp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/imagesick"
+                                        android:layout_width="@dimen/_13sdp"
+                                        android:layout_height="@dimen/_13sdp"
+                                        android:src="@drawable/sick"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:tint="@color/yellow" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <TextView
+                                android:id="@+id/txtSickLeave"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="Sick Leaves"
+                                android:textColor="@color/white"
+                                android:textSize="10dp"
+                                app:layout_constraintBottom_toTopOf="@+id/txtTotalSickLeave"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txtTotalSickLeave"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="--"
+                                android:textColor="@color/yellow"
+                                android:textSize="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/materialCardView3"
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_marginTop="10dp"
+                        app:cardBackgroundColor="#474749"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="@id/rightGuideline"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/cardSickLeave"
+                        app:layout_constraintTop_toBottomOf="@+id/txttotalteammembers">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="7dp">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/mcbvimageView3"
+                                android:layout_width="@dimen/_26sdp"
+                                android:layout_height="@dimen/_26sdp"
+                                app:cardBackgroundColor="@color/leavesimg_background"
+                                app:cardCornerRadius="@dimen/_50sdp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <ImageView
+                                        android:id="@+id/imageView3"
+                                        android:layout_width="@dimen/_13sdp"
+                                        android:layout_height="@dimen/_13sdp"
+                                        android:src="@drawable/casual"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:tint="@color/yellow" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+
+                            <TextView
+                                android:id="@+id/textView8"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="Casual Leaves"
+                                android:textColor="@color/white"
+                                android:textSize="10dp"
+                                app:layout_constraintBottom_toTopOf="@+id/txtTotalCasualLeaves"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                            <TextView
+                                android:id="@+id/txtTotalCasualLeaves"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/montserrat_semibold"
+                                android:text="--"
+                                android:textColor="@color/yellow"
+                                android:textSize="25dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <RelativeLayout
+                        android:id="@+id/rvlayout"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_170sdp"
+                        android:layout_marginTop="20dp"
+                        tools:visibility="gone"
+                        android:background="@drawable/recyclerviewbackground"
+                        android:elevation="@dimen/_10sdp"
+                        android:padding="@dimen/_10sdp"
+                        app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/approvallayout">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvleaves"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="horizontal"
+                            android:visibility="visible"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            tools:listitem="@layout/leavesitem" />
+                    </RelativeLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/statisticsattendancelayout"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_320sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        app:cardBackgroundColor="@color/charcoal"
+                        app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                        app:layout_constraintStart_toEndOf="@+id/leftGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/rvlayout">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/mcvAttendanceGraph"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:visibility="visible"
+                                app:cardBackgroundColor="#474749"
+                                app:cardCornerRadius="@dimen/_15sdp"
+                                app:cardElevation="@dimen/_5sdp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mcvStatistics">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <ProgressBar
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        android:id="@+id/linechartprogressbar"
+                                        android:indeterminateTint="@color/latearrival_yellow"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/attendancetext"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:text="Attendance"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_14sdp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/attendancedate"
+                                        app:layout_constraintBottom_toBottomOf="@+id/attendancedate"/>
+
+                                    <TextView
+                                        android:id="@+id/txtatthendancegraphrecord"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=""
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:translationZ="@dimen/_20sdp"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:visibility="gone"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                                    <!--                                    <com.github.mikephil.charting.charts.LineChart-->
+                                    <!--                                        android:id="@+id/linechart"-->
+                                    <!--                                        android:layout_width="match_parent"-->
+                                    <!--                                        android:layout_height="@dimen/_180sdp"-->
+                                    <!--                                        android:layout_centerHorizontal="true"-->
+                                    <!--                                        android:layout_margin="10dp"-->
+                                    <!--                                        android:layout_marginTop="50dp"-->
+                                    <!--                                        android:visibility="gone"-->
+                                    <!--                                        android:layout_marginBottom="50dp"-->
+                                    <!--                                        app:layout_constraintBottom_toBottomOf="parent"-->
+                                    <!--                                        app:layout_constraintEnd_toEndOf="parent"-->
+                                    <!--                                        app:layout_constraintStart_toStartOf="parent"-->
+                                    <!--                                        app:layout_constraintTop_toBottomOf="@+id/attendancetext" />-->
+
+                                    <com.github.mikephil.charting.charts.BarChart
+                                        android:id="@+id/barChart"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_180sdp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        android:visibility="gone"
+                                        app:layout_constraintTop_toBottomOf="@+id/attendancetext"
+                                        android:layout_marginTop="40dp"
+                                        android:layout_marginBottom="50dp"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/legendpresent2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="@dimen/_20sdp"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:gravity="center"
+                                        android:text="Present"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_9sdp"
+                                        app:drawableLeftCompat="@drawable/green_circle_24"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/legendabsent2"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/legendabsent2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="@dimen/_20sdp"
+                                        android:drawableLeft="@drawable/red_circle_24"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:gravity="center"
+                                        android:text="Absent"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_9sdp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/legendleave2"
+                                        app:layout_constraintStart_toEndOf="@+id/legendpresent2" />
+
+                                    <TextView
+                                        android:id="@+id/legendleave2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="@dimen/_20sdp"
+                                        android:drawableLeft="@drawable/leave_circle_24"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:gravity="center"
+                                        android:text="Leave"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_9sdp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/legendlatearrival2"
+                                        app:layout_constraintHorizontal_bias="0.5"
+                                        app:layout_constraintStart_toEndOf="@+id/legendabsent2" />
+
+                                    <TextView
+                                        android:id="@+id/legendlatearrival2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="@dimen/_20sdp"
+                                        android:drawableLeft="@drawable/la_circle_24"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:gravity="center"
+                                        android:text="LA"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_9sdp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.5"
+                                        app:layout_constraintStart_toEndOf="@+id/legendleave2" />
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:id="@+id/attendnacefilter"
+                                        style="@style/filtersbackground"
+                                        android:layout_width="@dimen/_75sdp"
+                                        android:layout_height="@dimen/_22sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_marginBottom="@dimen/_40sdp"
+                                        android:visibility="visible"
+                                        app:cardElevation="@dimen/_10sdp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+                                                android:id="@+id/txtattendancefilter"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginEnd="@dimen/_4sdp"
+                                                android:fontFamily="@font/montserrat_semibold"
+                                                android:text="Filters"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/_8sdp"
+                                                android:layout_marginStart="@dimen/_7sdp"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <ImageView
+                                                android:id="@+id/calendarattendancefilter"
+                                                android:layout_width="@dimen/_9sdp"
+                                                android:layout_height="@dimen/_9sdp"
+                                                android:layout_marginStart="@dimen/_7sdp"
+                                                android:src="@drawable/filter"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                android:layout_marginEnd="@dimen/_7sdp"
+                                                app:layout_constraintTop_toTopOf="parent" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                    </com.google.android.material.card.MaterialCardView>
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:id="@+id/dateoptions"
+                                        android:layout_width="@dimen/_75sdp"
+                                        android:layout_height="@dimen/_40sdp"
+                                        android:layout_marginTop="@dimen/_2sdp"
+                                        android:visibility="gone"
+                                        app:cardBackgroundColor="#474749"
+                                        app:cardElevation="@dimen/_10sdp"
+                                        app:layout_constraintEnd_toEndOf="@+id/attendancedate"
+                                        app:layout_constraintTop_toBottomOf="@+id/attendancedate"
+                                        app:strokeColor="#a1a1a1"
+                                        app:strokeWidth="@dimen/_1sdp">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+                                                android:id="@+id/textweek"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/_15sdp"
+                                                android:layout_marginStart="5dp"
+                                                android:layout_marginTop="@dimen/_4sdp"
+                                                android:text="Last 5 days"
+                                                android:textAlignment="viewStart"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/_10sdp"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <TextView
+                                                android:id="@+id/textmonth"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/_15sdp"
+                                                android:layout_marginStart="5dp"
+                                                android:layout_marginTop="@dimen/_2sdp"
+                                                android:text="Last month"
+                                                android:textAlignment="textStart"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/_10sdp"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toBottomOf="@+id/textweek" />
+
+
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                                    </com.google.android.material.card.MaterialCardView>
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:id="@+id/attendancedate"
+                                        style="@style/filtersbackground"
+                                        android:layout_width="@dimen/_75sdp"
+                                        android:layout_height="@dimen/_22sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_marginBottom="@dimen/_40sdp"
+                                        android:visibility="visible"
+                                        app:cardElevation="@dimen/_10sdp"
+                                        app:layout_constraintEnd_toStartOf="@+id/attendnacefilter"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+                                                android:id="@+id/txtdateattendance"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginEnd="@dimen/_4sdp"
+                                                android:fontFamily="@font/montserrat_semibold"
+                                                android:text="Date"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/_8sdp"
+                                                android:layout_marginStart="@dimen/_7sdp"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <ImageView
+                                                android:id="@+id/calendardateattendance"
+                                                android:layout_width="@dimen/_9sdp"
+                                                android:layout_height="@dimen/_9sdp"
+                                                android:layout_marginStart="@dimen/_7sdp"
+                                                android:src="@drawable/calendar_download"
+                                                android:layout_marginEnd="@dimen/_7sdp"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                    </com.google.android.material.card.MaterialCardView>
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/txtfromattendancedate"
+                                        app:layout_constraintTop_toBottomOf="@+id/attendancedate"
+                                        app:layout_constraintStart_toStartOf="@+id/attendancedate"
+                                        android:text="From:"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:textColor="@color/teamlead_grey"
+                                        android:textSize="@dimen/_9sdp"
+                                        />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/txtselectedfromattendancedate"
+                                        app:layout_constraintTop_toBottomOf="@+id/attendancedate"
+                                        app:layout_constraintStart_toEndOf="@+id/txtfromattendancedate"
+                                        android:text="---"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:textColor="@color/teamlead_grey"
+                                        android:layout_marginStart="@dimen/_2sdp"
+                                        android:textSize="@dimen/_9sdp"
+                                        />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/txttoattendancedate"
+                                        app:layout_constraintTop_toBottomOf="@+id/attendancedate"
+                                        app:layout_constraintStart_toStartOf="@+id/attendnacefilter"
+                                        android:text="To:"
+                                        android:layout_marginStart="@dimen/_5sdp"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:textColor="@color/teamlead_grey"
+                                        android:textSize="@dimen/_9sdp"
+                                        />
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/txtselectedtoattendancedate"
+                                        app:layout_constraintTop_toBottomOf="@+id/attendancedate"
+                                        app:layout_constraintStart_toEndOf="@+id/txttoattendancedate"
+                                        android:text="---"
+                                        android:layout_marginTop="@dimen/_5sdp"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:textColor="@color/teamlead_grey"
+                                        android:layout_marginStart="@dimen/_2sdp"
+                                        android:textSize="@dimen/_9sdp"
+                                        />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/mcvStatisticsGraph"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="@dimen/_20sdp"
+                                android:visibility="gone"
+                                app:cardBackgroundColor="#474749"
+                                app:cardCornerRadius="@dimen/_15sdp"
+                                app:cardElevation="@dimen/_5sdp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/mcvStatistics">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:id="@+id/pieLayout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/statisticstext"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:text="Statistics"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_14sdp"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="@+id/statisticsdate"
+                                        app:layout_constraintBottom_toBottomOf="@+id/statisticsdate"/>
+
+                                    <!--                                    <TextView-->
+                                    <!--                                        android:id="@+id/graphabsentttext"-->
+                                    <!--                                        android:layout_width="wrap_content"-->
+                                    <!--                                        android:layout_height="wrap_content"-->
+                                    <!--                                        android:layout_marginStart="@dimen/_55sdp"-->
+                                    <!--                                        android:fontFamily="@font/montserrat_semibold"-->
+                                    <!--                                        android:text=""-->
+                                    <!--                                       android:layout_marginTop="@dimen/_15sdp"-->
+                                    <!--                                        android:textColor="@color/absent_red"-->
+                                    <!--                                        android:textSize="@dimen/_13sdp"-->
+                                    <!--                                        app:layout_constraintStart_toStartOf="parent"-->
+                                    <!--                                        app:layout_constraintTop_toTopOf="@+id/pieChart" />-->
+
+                                    <!--                                    <TextView-->
+                                    <!--                                        android:id="@+id/graphpresenttext"-->
+                                    <!--                                        android:layout_width="wrap_content"-->
+                                    <!--                                        android:layout_height="wrap_content"-->
+                                    <!--                                        android:layout_marginTop="@dimen/_15sdp"-->
+                                    <!--                                        android:layout_marginBottom="@dimen/_15sdp"-->
+                                    <!--                                        android:layout_marginStart="@dimen/_55sdp"-->
+                                    <!--                                        android:text=""-->
+                                    <!--                                        android:fontFamily="@font/montserrat_semibold"-->
+                                    <!--                                        android:textColor="@color/present_green"-->
+                                    <!--                                        android:textSize="@dimen/_13sdp"-->
+                                    <!--                                        app:layout_constraintBottom_toBottomOf="@+id/pieChart"-->
+                                    <!--                                        app:layout_constraintStart_toStartOf="parent" />-->
+
+                                    <!--                                    <TextView-->
+                                    <!--                                        android:id="@+id/latearrivalgraphtext"-->
+                                    <!--                                        android:layout_width="wrap_content"-->
+                                    <!--                                        android:layout_height="wrap_content"-->
+                                    <!--                                        android:layout_marginBottom="@dimen/_15sdp"-->
+                                    <!--                                        android:layout_marginEnd="@dimen/_55sdp"-->
+                                    <!--                                        android:fontFamily="@font/montserrat_semibold"-->
+                                    <!--                                        android:text=""-->
+                                    <!--                                        android:textColor="@color/latearrival_yellow"-->
+                                    <!--                                        android:textSize="@dimen/_13sdp"-->
+                                    <!--                                        app:layout_constraintBottom_toBottomOf="@+id/pieChart"-->
+                                    <!--                                        app:layout_constraintEnd_toEndOf="parent"-->
+                                    <!--                                         />-->
+
+                                    <!--                                    <TextView-->
+                                    <!--                                        android:id="@+id/leavegraphtext"-->
+                                    <!--                                        android:layout_width="wrap_content"-->
+                                    <!--                                        android:layout_height="wrap_content"-->
+                                    <!--                                        android:layout_marginEnd="@dimen/_55sdp"-->
+                                    <!--                                        android:layout_marginTop="@dimen/_15sdp"-->
+                                    <!--                                        android:text=""-->
+                                    <!--                                        android:fontFamily="@font/montserrat_semibold"-->
+                                    <!--                                        android:textColor="@color/leaves_blue"-->
+                                    <!--                                        android:textSize="@dimen/_13sdp"-->
+                                    <!--                                        app:layout_constraintEnd_toEndOf="parent"-->
+                                    <!--                                        app:layout_constraintTop_toTopOf="@+id/pieChart" />-->
+
+                                    <TextView
+                                        android:id="@+id/totalgraphtext"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text=""
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:translationZ="@dimen/_20sdp"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp"
+                                        android:visibility="gone"
+                                        android:textAlignment="center"
+                                        android:textStyle="bold"
+                                        app:layout_constraintBottom_toBottomOf="@+id/pieChart"
+                                        app:layout_constraintEnd_toEndOf="@+id/pieChart"
+                                        app:layout_constraintStart_toStartOf="@+id/pieChart"
+                                        app:layout_constraintTop_toTopOf="@+id/pieChart" />
+
+
+                                    <com.github.mikephil.charting.charts.PieChart
+                                        android:id="@+id/pieChart"
+                                        android:layout_width="@dimen/_210sdp"
+                                        android:layout_height="@dimen/_210sdp"
+                                        android:layout_centerHorizontal="true"
+                                        android:visibility="gone"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                    <ProgressBar
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        android:id="@+id/piechartprogressbar"
+                                        android:indeterminateTint="@color/latearrival_yellow"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/legendpresent"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="@dimen/_20sdp"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:gravity="center"
+                                        android:text="Present"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_9sdp"
+                                        app:drawableLeftCompat="@drawable/green_circle_24"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/legendabsent"
+                                        app:layout_constraintStart_toStartOf="parent" />
+
+                                    <TextView
+                                        android:id="@+id/legendabsent"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="@dimen/_20sdp"
+                                        android:drawableLeft="@drawable/red_circle_24"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:gravity="center"
+                                        android:text="Absent"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_9sdp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/legendleave"
+                                        app:layout_constraintStart_toEndOf="@+id/legendpresent" />
+
+                                    <TextView
+                                        android:id="@+id/legendleave"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="@dimen/_20sdp"
+                                        android:drawableLeft="@drawable/leave_circle_24"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:gravity="center"
+                                        android:text="Leave"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_9sdp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toStartOf="@+id/legendlatearrival"
+                                        app:layout_constraintHorizontal_bias="0.5"
+                                        app:layout_constraintStart_toEndOf="@+id/legendabsent" />
+
+                                    <TextView
+                                        android:id="@+id/legendlatearrival"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="@dimen/_20sdp"
+                                        android:drawableLeft="@drawable/la_circle_24"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:gravity="center"
+                                        android:text="LA"
+                                        android:visibility="gone"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_9sdp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintHorizontal_bias="0.5"
+                                        app:layout_constraintStart_toEndOf="@+id/legendleave" />
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:id="@+id/statisticsfilter"
+                                        style="@style/filtersbackground"
+                                        android:layout_width="@dimen/_75sdp"
+                                        android:layout_height="@dimen/_22sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_marginBottom="@dimen/_40sdp"
+                                        android:visibility="visible"
+                                        app:cardElevation="@dimen/_10sdp"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+                                                android:id="@+id/txtfilter"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginEnd="@dimen/_4sdp"
+                                                android:fontFamily="@font/montserrat_semibold"
+                                                android:text="Filters"
+                                                android:layout_marginStart="@dimen/_7sdp"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/_8sdp"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <ImageView
+                                                android:id="@+id/calendarfilter"
+                                                android:layout_width="@dimen/_9sdp"
+                                                android:layout_height="@dimen/_9sdp"
+                                                android:layout_marginStart="@dimen/_7sdp"
+                                                android:src="@drawable/filter"
+                                                android:layout_marginEnd="@dimen/_7sdp"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                    </com.google.android.material.card.MaterialCardView>
+
+                                    <com.google.android.material.card.MaterialCardView
+                                        android:id="@+id/statisticsdate"
+                                        style="@style/filtersbackground"
+                                        android:layout_width="@dimen/_75sdp"
+                                        android:layout_height="@dimen/_22sdp"
+                                        android:layout_marginTop="@dimen/_10sdp"
+                                        android:layout_marginEnd="@dimen/_10sdp"
+                                        android:layout_marginBottom="@dimen/_40sdp"
+                                        android:visibility="visible"
+                                        app:cardElevation="@dimen/_10sdp"
+                                        app:layout_constraintEnd_toStartOf="@+id/statisticsfilter"
+                                        app:layout_constraintTop_toTopOf="parent">
+
+                                        <androidx.constraintlayout.widget.ConstraintLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <TextView
+                                                android:id="@+id/txtdatestatistics"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginEnd="@dimen/_4sdp"
+                                                android:fontFamily="@font/montserrat_semibold"
+                                                android:text="Date"
+                                                android:textColor="@color/white"
+                                                android:textSize="@dimen/_8sdp"
+                                                android:layout_marginStart="@dimen/_7sdp"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintStart_toStartOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+
+                                            <ImageView
+                                                android:id="@+id/calendardatestatistics"
+                                                android:layout_width="7dp"
+                                                android:layout_height="12dp"
+                                                android:layout_marginStart="@dimen/_2sdp"
+                                                android:layout_marginEnd="@dimen/_7sdp"
+                                                android:src="@drawable/calendar_download"
+                                                app:layout_constraintBottom_toBottomOf="parent"
+                                                app:layout_constraintEnd_toEndOf="parent"
+                                                app:layout_constraintTop_toTopOf="parent" />
+                                        </androidx.constraintlayout.widget.ConstraintLayout>
+                                    </com.google.android.material.card.MaterialCardView>
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/mcvStatistics"
+                                android:layout_width="@dimen/_128sdp"
+                                android:layout_height="@dimen/_38sdp"
+                                android:layout_marginStart="@dimen/_3sdp"
+                                android:layout_marginEnd="@dimen/_10sdp"
+                                app:cardBackgroundColor="#474749"
+                                app:cardCornerRadius="@dimen/_10sdp"
+                                app:cardElevation="@dimen/_5sdp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/txtstatistics"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:text="Statistics"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13sdp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:id="@+id/mcvAttendnace"
+                                android:layout_width="@dimen/_128sdp"
+                                android:layout_height="@dimen/_38sdp"
+                                android:layout_marginEnd="@dimen/_3sdp"
+                                app:cardBackgroundColor="#474749"
+                                app:cardCornerRadius="@dimen/_10sdp"
+                                app:cardElevation="@dimen/_5sdp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/txtAttendance"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:text="Attendance"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/_13sdp"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent" />
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+                            </com.google.android.material.card.MaterialCardView>
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/layoutchangingview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                        app:layout_constraintStart_toEndOf="@+id/leftGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/dept">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/mcvdepartmentattendance"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            app:cardBackgroundColor="#474749"
+                            app:cardCornerRadius="18dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <androidx.constraintlayout.widget.ConstraintLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:padding="4dp">
+
+
+                                    <ImageView
+                                        android:id="@+id/departmentrightarrow"
+                                        android:layout_width="23dp"
+                                        android:layout_height="23dp"
+                                        android:layout_marginTop="@dimen/_6sdp"
+                                        android:layout_marginEnd="@dimen/_7sdp"
+                                        android:padding="@dimen/_2sdp"
+                                        android:src="@drawable/arrowright"
+                                        app:layout_constraintBottom_toBottomOf="@+id/departmentimgcalendar"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:tint="@color/grey_font" />
+
+                                    <ImageView
+                                        android:id="@+id/departmentleftarrow"
+                                        android:layout_width="23dp"
+                                        android:layout_height="23dp"
+                                        android:layout_marginStart="@dimen/_7sdp"
+                                        android:layout_marginTop="@dimen/_6sdp"
+                                        android:padding="@dimen/_2sdp"
+                                        android:src="@drawable/arrowleft"
+                                        app:layout_constraintBottom_toBottomOf="@+id/departmentimgcalendar"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:tint="@color/yellow" />
+
+                                    <ImageView
+                                        android:id="@+id/departmentimgcalendar"
+                                        android:layout_width="@dimen/_23sdp"
+                                        android:layout_height="@dimen/_23sdp"
+                                        android:layout_marginTop="@dimen/_4sdp"
+                                        android:layout_marginEnd="@dimen/_110sdp"
+                                        android:padding="@dimen/_5sdp"
+                                        android:src="@drawable/calendar_download"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toTopOf="parent"
+                                        app:tint="@color/yellow" />
+
+                                    <TextView
+                                        android:id="@+id/departmenttxtcheck"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_2sdp"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:text="May 2023"
+                                        android:textColor="@color/yellow"
+                                        android:textSize="@dimen/_11ssp"
+                                        app:layout_constraintBottom_toBottomOf="@+id/departmentimgcalendar"
+                                        app:layout_constraintStart_toEndOf="@+id/departmentimgcalendar"
+                                        app:layout_constraintTop_toTopOf="@+id/departmentimgcalendar" />
+
+                                    <View
+                                        android:id="@+id/view2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/_1sdp"
+                                        android:layout_marginStart="@dimen/_10sdp"
+                                        android:layout_marginTop="@dimen/_9sdp"
+                                        android:layout_marginEnd="@dimen/_11sdp"
+                                        android:background="@color/light_gray"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/departmentimgcalendar" />
+
+                                    <TextView
+                                        android:id="@+id/txtnorecordfound"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/montserrat_semibold"
+                                        android:text="No record found"
+                                        android:textColor="@color/white"
+                                        android:visibility="gone"
+                                        app:layout_constraintBottom_toBottomOf="parent"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/rvdepartmentattendance"
+                                        android:layout_width="0dp"
+                                        android:layout_height="0dp"
+                                        android:layout_marginTop="2dp"
+                                        android:visibility="visible"
+                                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                        app:layout_constraintEnd_toEndOf="parent"
+                                        app:layout_constraintStart_toStartOf="parent"
+                                        app:layout_constraintTop_toBottomOf="@+id/view2"
+                                        tools:listitem="@layout/departmentattendanceitem" />
+
+                                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/mcvdate"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/_130sdp"
+                            android:visibility="gone"
+                            app:cardBackgroundColor="#474749"
+                            app:cardCornerRadius="18dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="10dp">
+
+
+                                <ImageView
+                                    android:id="@+id/rightarrow"
+                                    android:layout_width="23dp"
+                                    android:layout_height="23dp"
+                                    android:padding="@dimen/_2sdp"
+                                    android:src="@drawable/arrowright"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imgcalendar"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:tint="@color/grey_font" />
+
+                                <ImageView
+                                    android:id="@+id/leftarrow"
+                                    android:layout_width="23dp"
+                                    android:layout_height="23dp"
+                                    android:padding="@dimen/_2sdp"
+                                    android:src="@drawable/arrowleft"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imgcalendar"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:tint="@color/yellow" />
+
+                                <ImageView
+                                    android:id="@+id/imgcalendar"
+                                    android:layout_width="@dimen/_15sdp"
+                                    android:layout_height="@dimen/_15sdp"
+                                    android:layout_marginEnd="@dimen/_110sdp"
+                                    android:src="@drawable/calendar_download"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:tint="@color/yellow" />
+
+                                <TextView
+                                    android:id="@+id/txtcheck"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:text="May 2023"
+                                    android:textColor="@color/yellow"
+                                    android:textSize="@dimen/_11ssp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/imgcalendar"
+                                    app:layout_constraintStart_toEndOf="@+id/imgcalendar"
+                                    app:layout_constraintTop_toTopOf="@+id/imgcalendar" />
+
+                                <View
+                                    android:id="@+id/view5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_1sdp"
+                                    android:layout_marginStart="@dimen/_5sdp"
+                                    android:layout_marginTop="@dimen/_9sdp"
+                                    android:layout_marginEnd="@dimen/_5sdp"
+                                    android:background="#7b7776"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/imgcalendar" />
+
+                                <TextView
+                                    android:id="@+id/txtnorecord"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:text="No record found"
+                                    android:textColor="@color/white"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/mcvemployeestrength"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_60sdp"
+                                    android:layout_marginStart="@dimen/_8sdp"
+                                    android:layout_marginTop="@dimen/_30sdp"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:visibility="visible"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:listitem="@layout/managerdepartmentitem" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/mcvattendancestatus"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_180sdp"
+                            android:visibility="visible"
+                            app:cardBackgroundColor="@color/light_cahrcoal"
+                            app:cardCornerRadius="18dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:id="@+id/attendancelayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_10sdp"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:id="@+id/txtthisweek"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/montserrat_semibold"
+                                    android:text="This Week"
+                                    android:textColor="@color/yellow"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <View
+                                    android:id="@+id/view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginStart="@dimen/_8sdp"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    android:alpha="0.5"
+                                    android:background="#7b7776"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/txtthisweek" />
+
+                                <ImageView
+                                    android:id="@+id/imgnext"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/_4sdp"
+                                    android:src="@drawable/next"
+                                    android:visibility="gone"
+                                    android:translationZ="@dimen/_8sdp"
+                                    app:layout_constraintBottom_toBottomOf="@+id/mcvattendanceweek"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="@+id/mcvattendanceweek" />
+
+                                <com.google.android.material.card.MaterialCardView
+                                    android:id="@+id/mcvattendanceweek"
+                                    android:visibility="gone"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_110sdp"
+                                    android:layout_marginStart="@dimen/_8sdp"
+                                    android:layout_marginTop="@dimen/_13sdp"
+                                    android:layout_marginEnd="@dimen/_8sdp"
+                                    app:cardBackgroundColor="#343434"
+                                    app:cardCornerRadius="15dp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/view"
+                                    app:strokeColor="@color/yellow"
+                                    app:strokeWidth="@dimen/_1sdp">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="15dp">
+
+                                        <TextView
+                                            android:id="@+id/txtmon"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_10sdp"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:text="Mon"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_11sdp"
+                                            app:layout_constraintEnd_toStartOf="@+id/viewmon"
+                                            app:layout_constraintHorizontal_bias="0.5"
+                                            app:layout_constraintHorizontal_chainStyle="spread"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <View
+                                            android:id="@+id/viewmon"
+                                            android:layout_width="@dimen/_1sdp"
+                                            android:layout_height="15dp"
+                                            android:layout_marginTop="@dimen/_12sdp"
+                                            android:background="@color/white"
+                                            app:layout_constraintEnd_toStartOf="@+id/txttuesday"
+                                            app:layout_constraintHorizontal_bias="0.5"
+                                            app:layout_constraintStart_toEndOf="@+id/txtmon"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <TextView
+                                            android:id="@+id/txttuesday"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_10sdp"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:text="Tue"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_11sdp"
+                                            app:layout_constraintEnd_toStartOf="@+id/viewtuesday"
+                                            app:layout_constraintHorizontal_bias="0.5"
+                                            app:layout_constraintStart_toEndOf="@+id/viewmon"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <View
+                                            android:id="@+id/viewtuesday"
+                                            android:layout_width="@dimen/_1sdp"
+                                            android:layout_height="15dp"
+                                            android:layout_marginTop="@dimen/_12sdp"
+                                            android:background="@color/white"
+                                            app:layout_constraintEnd_toStartOf="@+id/txtwednesday"
+                                            app:layout_constraintHorizontal_bias="0.5"
+                                            app:layout_constraintStart_toEndOf="@+id/txttuesday"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <TextView
+                                            android:id="@+id/txtwednesday"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_10sdp"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:text="Wed"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_11sdp"
+                                            app:layout_constraintEnd_toStartOf="@+id/viewwednesday"
+                                            app:layout_constraintHorizontal_bias="0.5"
+                                            app:layout_constraintStart_toEndOf="@+id/viewtuesday"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <View
+                                            android:id="@+id/viewwednesday"
+                                            android:layout_width="@dimen/_1sdp"
+                                            android:layout_height="15dp"
+                                            android:layout_marginTop="@dimen/_12sdp"
+                                            android:background="@color/white"
+                                            app:layout_constraintEnd_toStartOf="@+id/txtthursday"
+                                            app:layout_constraintHorizontal_bias="0.5"
+                                            app:layout_constraintStart_toEndOf="@+id/txtwednesday"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <TextView
+                                            android:id="@+id/txtthursday"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_10sdp"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:text="Thurs"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_11sdp"
+                                            app:layout_constraintEnd_toStartOf="@+id/viewthursday"
+                                            app:layout_constraintHorizontal_bias="0.5"
+                                            app:layout_constraintStart_toEndOf="@+id/viewwednesday"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <View
+                                            android:id="@+id/viewthursday"
+                                            android:layout_width="@dimen/_1sdp"
+                                            android:layout_height="15dp"
+                                            android:layout_marginTop="@dimen/_12sdp"
+                                            android:background="@color/white"
+                                            app:layout_constraintEnd_toStartOf="@+id/txtfriday"
+                                            app:layout_constraintHorizontal_bias="0.5"
+                                            app:layout_constraintStart_toEndOf="@+id/txtthursday"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <TextView
+                                            android:id="@+id/txtfriday"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_10sdp"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:text="Fri"
+                                            android:textColor="@color/white"
+                                            android:textSize="@dimen/_11sdp"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintHorizontal_bias="0.5"
+                                            app:layout_constraintStart_toEndOf="@+id/viewthursday"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <TextView
+                                            android:id="@+id/txtmondaypresent"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_10sdp"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:text="--"
+                                            android:textColor="#ffffff"
+                                            android:textSize="@dimen/_11sdp"
+                                            app:layout_constraintEnd_toEndOf="@+id/txtmon"
+                                            app:layout_constraintHorizontal_bias="0.5"
+                                            app:layout_constraintHorizontal_chainStyle="spread"
+                                            app:layout_constraintStart_toStartOf="@+id/txtmon"
+                                            app:layout_constraintTop_toBottomOf="@+id/txtfriday" />
+
+                                        <TextView
+                                            android:id="@+id/txttuesdaystatus"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_10sdp"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:text="--"
+                                            android:textColor="#ffffff"
+                                            android:textSize="@dimen/_11sdp"
+                                            app:layout_constraintEnd_toEndOf="@+id/txttuesday"
+                                            app:layout_constraintHorizontal_bias="0.5"
+                                            app:layout_constraintHorizontal_chainStyle="spread"
+                                            app:layout_constraintStart_toStartOf="@+id/txttuesday"
+                                            app:layout_constraintTop_toBottomOf="@+id/txtfriday" />
+
+                                        <TextView
+                                            android:id="@+id/txtwedstatus"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_10sdp"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:text="--"
+                                            android:textColor="#ffffff"
+                                            android:textSize="@dimen/_11sdp"
+                                            app:layout_constraintEnd_toEndOf="@+id/txtwednesday"
+                                            app:layout_constraintHorizontal_bias="0.5"
+                                            app:layout_constraintHorizontal_chainStyle="spread"
+                                            app:layout_constraintStart_toStartOf="@+id/txtwednesday"
+                                            app:layout_constraintTop_toBottomOf="@+id/txtfriday" />
+
+                                        <TextView
+                                            android:id="@+id/txtthursstatus"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_10sdp"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:text="--"
+                                            android:textColor="#ffffff"
+                                            android:textSize="@dimen/_11sdp"
+                                            app:layout_constraintEnd_toEndOf="@+id/txtthursday"
+                                            app:layout_constraintStart_toStartOf="@+id/txtthursday"
+                                            app:layout_constraintTop_toBottomOf="@+id/txtfriday" />
+
+                                        <TextView
+                                            android:id="@+id/txtfristatus"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_10sdp"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:text="--"
+                                            android:textColor="#ffffff"
+                                            android:textSize="@dimen/_11sdp"
+                                            app:layout_constraintEnd_toEndOf="@+id/txtfriday"
+                                            app:layout_constraintHorizontal_bias="0.5"
+                                            app:layout_constraintHorizontal_chainStyle="spread"
+                                            app:layout_constraintStart_toStartOf="@+id/txtfriday"
+                                            app:layout_constraintTop_toBottomOf="@+id/txtfriday" />
+
+                                        <TextView
+                                            android:id="@+id/txtpresentstatus"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_43sdp"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:text="Present: 0"
+                                            android:textColor="@color/present_green"
+                                            android:textSize="@dimen/_8sdp"
+                                            app:layout_constraintEnd_toStartOf="@+id/txtabsentstautus"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toBottomOf="@+id/txtfriday" />
+
+
+                                        <TextView
+                                            android:id="@+id/txtabsentstautus"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_43sdp"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:text="Absent: 0"
+                                            android:textColor="@color/absent_red"
+                                            android:textSize="@dimen/_8sdp"
+                                            app:layout_constraintEnd_toStartOf="@id/txtleavesstatus"
+                                            app:layout_constraintStart_toEndOf="@+id/txtpresentstatus"
+                                            app:layout_constraintTop_toBottomOf="@+id/txtfriday" />
+
+
+                                        <TextView
+                                            android:id="@+id/txtleavesstatus"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_43sdp"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:text="Leaves: 0"
+                                            android:textColor="@color/leaves_blue"
+                                            android:textSize="@dimen/_8sdp"
+                                            app:layout_constraintEnd_toStartOf="@+id/txtlatestaus"
+                                            app:layout_constraintStart_toEndOf="@+id/txtabsentstautus"
+                                            app:layout_constraintTop_toBottomOf="@+id/txtfriday" />
+
+
+                                        <TextView
+                                            android:id="@+id/txtlatestaus"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/_43sdp"
+                                            android:fontFamily="@font/montserrat_semibold"
+                                            android:text="Lates: 0"
+                                            android:textColor="@color/latearrival_yellow"
+                                            android:textSize="@dimen/_8sdp"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toEndOf="@+id/txtleavesstatus"
+                                            app:layout_constraintTop_toBottomOf="@+id/txtfriday" />
+
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/mcvimageslider"
+                        android:layout_width="0dp"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="20dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="18dp"
+                        app:cardElevation="@dimen/_10sdp"
+                        app:layout_constraintEnd_toStartOf="@+id/rightGuideline"
+                        app:layout_constraintStart_toEndOf="@+id/leftGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/layoutchangingview">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.denzcoskun.imageslider.ImageSlider
+                                android:id="@+id/slider"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:iss_auto_cycle="true"
+                                app:iss_corner_radius="0"
+                                app:iss_no_dots="false"
+                                app:iss_period="3000"
+                                app:iss_selected_dot="@drawable/circle"
+                                app:iss_title_background="@color/transparent"
+                                app:iss_unselected_dot="@drawable/default_unselected_dot"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/dept"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_marginTop="20dp"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/leftGuideline"
+                        app:layout_constraintTop_toBottomOf="@+id/statisticsattendancelayout">
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvctodept"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:scrollbars="none"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:listitem="@layout/ctodepartmentitem" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <!--<androidx.viewpager.widget.ViewPager-->
+                    <!--    android:layout_width="@dimen/_225sdp"-->
+                    <!--    android:layout_height="0dp"-->
+                    <!--    android:layout_marginTop="20dp"-->
+                    <!--    android:visibility="visible"-->
+                    <!--    app:layout_constraintBottom_toBottomOf="parent" -->
+                    <!--    app:layout_constraintEnd_toStartOf="@+id/rightGuideline" -->
+                    <!--    app:layout_constraintStart_toStartOf="@+id/leftGuideline"-->
+                    <!--    app:layout_constraintTop_toBottomOf="@+id/mcvattendancestatus"-->
+                    <!--    android:id="@+id/viewpagerImages"-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/checkIn_checkOut_Btn"
+            android:layout_width="@dimen/_55sdp"
+            android:layout_height="@dimen/_55sdp"
+            android:layout_marginEnd="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_40sdp"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/yellow"
+            app:cardCornerRadius="@dimen/_30sdp"
+            app:cardElevation="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/checkincheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:text="---"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_9sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

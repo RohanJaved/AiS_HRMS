@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/updateprofilefragment"
+    android:background="#393940">
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintGuide_percent="0.07"
+        android:orientation="vertical"
+        android:id="@+id/leftGuideline"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/rightGuideline"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93"
+        />
+    <com.google.android.material.card.MaterialCardView
+        android:layout_height="150dp"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+        app:cardBackgroundColor="#474747"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="20dp"
+        app:cardElevation="5dp"
+        android:id="@+id/mcvprofile"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="60dp"
+                android:layout_height="65dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/profileimage"
+                android:tint="@color/yellow"
+                android:layout_margin="10dp"
+                android:id="@+id/profile" />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/profilename"
+                app:layout_constraintStart_toEndOf="@+id/profile"
+                app:layout_constraintTop_toTopOf="@+id/profile"
+                android:layout_marginEnd="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="#ffffff"
+                android:textSize="17dp"
+                android:layout_marginStart="10dp"
+                android:text="Rohan"
+                />
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/txtcheckedinstatus"
+                app:layout_constraintStart_toEndOf="@+id/profile"
+                app:layout_constraintTop_toBottomOf="@+id/profilename"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/montserrat_semibold"
+                android:textColor="#918e8b"
+                android:textSize="12sp"
+                android:layout_marginStart="10dp"
+                android:text="Software Engineer"
+                />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/mcvprofile"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="5dp"
+        android:text="Email"
+        android:id="@+id/email"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/montserrat_semibold"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxCornerRadiusTopStart="17dp"
+        app:boxCornerRadiusTopEnd="17dp"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/edit"
+        app:boxCornerRadiusBottomEnd="17dp"
+        app:boxCornerRadiusBottomStart="17dp"
+        app:boxBackgroundColor="@color/charcoal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tilprofileemail"
+        app:hintEnabled="false"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingTop="10dp"
+            android:hint="Enter Email"
+            android:translationX="-10dp"
+            android:singleLine="true"
+            android:paddingBottom="10dp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/tilprofileemail"
+        android:layout_marginTop="20dp"
+        android:text="Mobile No"
+        android:id="@+id/mobile"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxCornerRadiusTopStart="17dp"
+        app:boxCornerRadiusTopEnd="17dp"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/edit"
+        app:boxCornerRadiusBottomEnd="17dp"
+        app:boxCornerRadiusBottomStart="17dp"
+        app:boxBackgroundColor="@color/charcoal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tilprofilemobileno"
+        app:hintEnabled="false"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/mobile"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingTop="10dp"
+            android:translationX="-10dp"
+            android:hint="Enter Mobile No"
+            android:singleLine="true"
+            android:paddingBottom="10dp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/tilprofilemobileno"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="4dp"
+        android:text="Emergency Contact No"
+        android:id="@+id/emergencycontactno"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:boxCornerRadiusTopStart="17dp"
+        app:boxCornerRadiusTopEnd="17dp"
+        app:endIconMode="custom"
+        app:endIconDrawable="@drawable/edit"
+        app:boxCornerRadiusBottomEnd="17dp"
+        app:boxCornerRadiusBottomStart="17dp"
+        app:boxBackgroundColor="@color/charcoal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/tilemergencycontactno"
+        app:hintEnabled="false"
+
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/emergencycontactno"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingTop="10dp"
+            android:translationX="-10dp"
+            android:hint="Enter Emergency No"
+            android:singleLine="true"
+            android:paddingBottom="10dp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:id="@+id/login"
+        app:layout_constraintTop_toBottomOf="@+id/tilemergencycontactno"
+        android:background="@drawable/loginbuttonbackground"
+        android:layout_marginTop="30dp"
+        >
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Save"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

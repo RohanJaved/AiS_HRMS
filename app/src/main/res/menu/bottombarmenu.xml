@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homefragment"
+        android:title="home"
+        android:icon="@drawable/dashboard"
+        android:menuCategory="secondary"
+        android:iconTint="#ffffff"
+
+        />
+    <item
+        android:id="@+id/timelinefragment"
+        android:title="Timeline"
+        android:icon="@drawable/refresh"
+        android:menuCategory="secondary"
+        android:iconTint="#ffffff"
+
+        />
+    <item
+        android:id="@+id/checkinoutfragment"
+        android:title="Check In And Out"
+        android:icon="@drawable/navbar"
+        android:menuCategory="secondary"
+        android:iconTint="#ffffff"
+        />
+
+
+</menu>

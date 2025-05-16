@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcvdate"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_68sdp"
+        app:cardBackgroundColor="#474749"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvemployeename"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                app:cardElevation="5dp"
+                android:layout_marginBottom="@dimen/_18sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:cardCornerRadius="@dimen/_50sdp"
+                android:layout_marginStart="@dimen/_7sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/txtfirstletter"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:fontFamily="@font/montserrat_semibold"
+                        android:text="M"
+                        android:gravity="center"
+
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvemployeedesignation"
+                android:layout_width="48dp"
+                android:layout_height="@dimen/_12sdp"
+                app:cardBackgroundColor="#0088dc"
+                app:cardElevation="5dp"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/_16sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/mcvemployeename"
+                app:cardCornerRadius="@dimen/_2sdp"
+                app:layout_constraintStart_toStartOf="@+id/mcvemployeename">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txtdesignation"
+                        android:textSize="@dimen/_6sdp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:gravity="center"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:fontFamily="@font/montserrat_regular"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:text="Manager"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/employeename"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/_9ssp"
+                android:fontFamily="@font/montserrat_regular"
+                app:layout_constraintStart_toEndOf="@+id/mcvemployeename"
+                app:layout_constraintTop_toTopOf="@+id/mcvemployeename"
+                app:layout_constraintBottom_toBottomOf="@id/mcvemployeename"
+                android:text="Moiz"
+                />
+            <TextView
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="wrap_content"
+                android:id="@+id/employattendancestatus"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="#008242"
+                android:textAlignment="textEnd"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:textSize="@dimen/_9sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:fontFamily="@font/montserrat_regular"
+                app:layout_constraintTop_toTopOf="@+id/employeename"
+                android:text="Present"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtcheckouttimeemployee"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:fontFamily="@font/montserrat_semibold"
+                app:layout_constraintTop_toBottomOf="@+id/employattendancestatus"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="---"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtcheckintimeemployee"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:textColor="@color/yellow"
+                android:textSize="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:layout_constraintEnd_toStartOf="@+id/txtcheckouttimeemployee"
+                android:fontFamily="@font/montserrat_semibold"
+                app:layout_constraintTop_toBottomOf="@+id/employattendancestatus"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="-----"
+                />
+            <View
+                android:layout_height="@dimen/_1sdp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="@dimen/_3sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@color/light_gray"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

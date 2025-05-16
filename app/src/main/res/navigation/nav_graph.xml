@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/homefragment">
+
+    <fragment
+        android:id="@+id/homefragment"
+        android:name="com.appinsnap.aishrm.ui.fragments.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+
+
+        <action
+            android:id="@+id/action_homefragment_to_employeeDetail"
+            app:destination="@id/employeeDetail">
+            <!--argument
+                android:name="empInfo"
+                app:argType="string"
+                app:nullable="true" />-->
+        </action>
+        <action
+            android:id="@+id/action_homefragment_to_employeeAttendance"
+            app:destination="@id/employeeattendance" />
+        <action
+            android:id="@+id/action_homefragment_to_leavemanagement"
+            app:destination="@id/leavemanagement" />
+        <action
+            android:id="@+id/action_homefragment_to_historyfragment"
+            app:destination="@id/historyfragment" />
+        <action
+            android:id="@+id/action_homefragment_to_approvalfragment"
+            app:destination="@id/approvalfragment" />
+        <action
+            android:id="@+id/action_homefragment_to_approvalAndNews"
+            app:destination="@id/approvalAndNews" />
+        <action
+            android:id="@+id/action_homefragment_to_statisticsFragment"
+            app:destination="@id/statisticsFragment" />
+        <action
+            android:id="@+id/action_homefragment_to_lateSittingDetails"
+            app:destination="@+id/latesittingFragment" />
+        <action
+            android:id="@+id/action_homefragment_to_policiesfragment"
+            app:destination="@id/policiesfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/timelinefragment"
+        android:name="com.appinsnap.aishrm.ui.fragments.TimelineFragment"
+        android:label="TimelineFragment"
+        tools:layout="@layout/fragment_timeline" />
+    <fragment
+        android:id="@+id/checkinoutfragment"
+        android:name="com.appinsnap.aishrm.ui.fragments.CheckInOutFragment"
+        android:label="fragment_check_in_out"
+        tools:layout="@layout/fragment_check_in_out" />
+    <fragment
+        android:id="@+id/profilefragment"
+        android:name="com.appinsnap.aishrm.ui.fragments.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile2">
+        <action
+            android:id="@+id/action_profilefragment_to_updateProfile"
+            app:destination="@id/updateprofilefragment"
+            app:popUpTo="@+id/homefragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/updateprofilefragment"
+        android:name="com.appinsnap.aishrm.ui.fragments.UpdateProfile"
+        android:label="UpdateProfile"
+        tools:layout="@layout/fragment_update_profile" />
+    <fragment
+        android:id="@+id/notificationfragment"
+        android:name="com.appinsnap.aishrm.ui.fragments.attendancehistory.NotificationFragment"
+        android:label="InAppNotification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/employeeDetail"
+        android:name="com.appinsnap.aishrm.ui.fragments.EmployeeHistory.EmployeeDetails"
+        android:label="fragment_employee_details"
+        tools:layout="@layout/fragment_employee_details">
+
+        <argument
+            android:name="empAtDetail"
+            app:argType="com.appinsnap.aishrm.ui.fragments.employeeattendance.model.EmployeeAttendanceInfo"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_employeeDetail_to_requestResubmission"
+            app:destination="@id/requestResubmissionfragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/employeeattendance"
+        android:name="com.appinsnap.aishrm.ui.fragments.employeeattendance.EmployeeAttendance"
+        android:label="EmployeeAttendance">
+        <argument
+            android:name="empAtDetail"
+            app:argType="com.appinsnap.aishrm.ui.fragments.employeeattendance.model.EmployeeAttendanceInfo"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_employeeattendance_to_employeeDetail"
+            app:destination="@id/employeeDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/approvalfragment"
+        android:name="com.appinsnap.aishrm.ui.fragments.approval.ApprovalFragment"
+        android:label="ApprovalFragment" />
+    <fragment
+        android:id="@+id/leavemanagement"
+        android:name="com.appinsnap.aishrm.ui.fragments.leaves.LeaveManagement"
+        android:label="LeaveManagement" >
+        <action
+            android:id="@+id/action_leavemanagement_to_leaveapplicationfragment"
+            app:destination="@id/leaveapplicationfragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/leaveapplicationfragment"
+        android:name="com.appinsnap.aishrm.ui.fragments.LeaaveApplication.LeaveApplication"
+        android:label="fragment_leave_application"
+        tools:layout="@layout/fragment_leave_application" >
+        <action
+            android:id="@+id/action_leaveapplicationfragment_to_leavemanagement"
+            app:popUpTo="@+id/homefragment"
+            app:destination="@id/leavemanagement" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyfragment"
+        android:name="com.appinsnap.aishrm.ui.fragments.history.History"
+        android:label="History" />
+    <fragment
+        android:id="@+id/approvalAndNews"
+        android:name="com.appinsnap.aishrm.ui.fragments.approvalnews.ApprovalAndNews"
+        android:label="ApprovalAndNews" >
+        <action
+            android:id="@+id/action_approvalAndNews_to_leaveDetails"
+            app:destination="@+id/leavedetailFragment" />
+        <action
+            android:id="@+id/action_approvalAndNews_to_latesittingFragment2"
+            app:destination="@id/latesittingFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="com.appinsnap.aishrm.ui.fragments.statics.StatisticsFragment"
+        android:label="StatisticsFragment"
+        tools:layout="@layout/fragment_statistics">
+
+        <argument
+            android:name="statsList"
+            app:argType="com.appinsnap.aishrm.ui.fragments.statics.model.StatisticAttendanceInfo"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_statisticsFragment_to_employeeDetail"
+            app:destination="@id/employeeDetail" />
+        <!--        <action-->
+        <!--            android:id="@+id/action_statistics_to_home"-->
+        <!--            app:popUpTo="@+id/homefragment"-->
+        <!--            app:destination="@id/homefragment" >-->
+        <!--        </action>-->
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/requestResubmissionfragment"
+        android:name="com.appinsnap.aishrm.ui.fragments.EmployeeHistory.RequestResubmission"
+        android:label="RequestResubmission" >
+        <argument
+            android:name="resubmissiondata"
+            app:argType="com.appinsnap.aishrm.ui.fragments.EmployeeHistory.model.RequestAttendanceInformation"
+            app:nullable="true"/>
+        <action
+            android:id="@+id/action_requestResubmissionfragment_to_employeeDetail"
+            app:popUpTo="@+id/homefragment"
+            app:destination="@id/employeeDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/leavedetailFragment"
+        android:name="com.appinsnap.aishrm.ui.fragments.leavesDetails.LeaveDetails"
+        android:label="fragment_leave_details"
+        tools:layout="@layout/fragment_leave_details">
+        <argument
+            android:name="todayModel"
+            app:argType="com.appinsnap.aishrm.ui.fragments.leavesDetails.models.TodayModel"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_leavedetailFragment_to_approvalAndNews"
+            app:popUpTo="@id/homefragment"
+            app:destination="@id/approvalAndNews" />
+
+        <!--        <argument-->
+        <!--            android:name="weekModel"-->
+        <!--            app:argType="com.appinsnap.aishrm.ui.fragments.leavesDetails.models.WeekModel"-->
+        <!--            app:nullable="true" />-->
+
+    </fragment>
+    <fragment
+        android:id="@+id/latesittingFragment"
+        android:name="com.appinsnap.aishrm.ui.fragments.latesit.LateSittingDetails"
+        android:label="LateSittingDetails">
+        <action
+            android:id="@+id/action_latesittingFragment_to_homefragment"
+            app:destination="@id/homefragment" />
+        <action
+            android:id="@+id/action_latesittingFragment_to_approvalAndNews"
+            app:popUpTo="@+id/homefragment"
+            app:destination="@id/approvalAndNews" />
+    </fragment>
+    <fragment
+        android:id="@+id/policiesfragment"
+        android:name="com.appinsnap.aishrm.ui.fragments.Policies.PoliciesFragment"
+        android:label="PoliciesFragment" >
+        <action
+            android:id="@+id/action_policiesfragment_to_pdfViewFragment"
+            app:destination="@id/pdfViewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pdfViewFragment"
+        android:name="com.appinsnap.aishrm.ui.fragments.Policies.PdfView"
+        android:label="PdfView" >
+        <argument
+            android:name="pdfData"
+            app:argType="com.appinsnap.aishrm.ui.fragments.Policies.models.PDFInfo"
+            app:nullable="true"/>
+    </fragment>
+
+</navigation>

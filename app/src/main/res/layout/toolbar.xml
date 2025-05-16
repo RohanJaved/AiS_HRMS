@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+           android:id="@+id/activity_main_appbarlayout"
+           android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+           android:layout_height="wrap_content"
+            android:background="@color/charcoal"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@null"
+            app:contentInsetStart="0dp"
+            app:contentInsetEnd="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintGuide_percent="0.07"
+                android:orientation="vertical"
+                android:id="@+id/leftGuideline"
+                />
+            <androidx.constraintlayout.widget.Guideline
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/rightGuideline"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.93"
+                />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+                app:layout_constraintTop_toTopOf="parent"
+                android:padding="10dp">
+
+                <ImageView
+                    android:id="@+id/imgBurgerMenu"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:onClick="openDrawer"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:src="@drawable/menu"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/navigationicon"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:onClick="openDrawer"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:src="@drawable/arrow"
+                    android:visibility="gone"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvToolbarTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrat_semibold"
+                    android:gravity="center"
+                    android:lineSpacingExtra="2dp"
+                    android:text="Home"
+                    android:layout_marginBottom="@dimen/_1sdp"
+                    android:textColor="#a39f9c"
+                    android:textSize="12dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imgBurgerMenu"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/imgBurgerMenu" />
+             <androidx.constraintlayout.widget.ConstraintLayout
+                 android:layout_width="@dimen/_23sdp"
+                 android:layout_height="@dimen/_30sdp"
+                 android:id="@+id/notificationcountlayout"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toStartOf="@+id/img"
+                 app:layout_constraintTop_toTopOf="parent">
+                 <TextView
+                     android:layout_width="@dimen/_13sdp"
+                     android:layout_height="@dimen/_12sdp"
+                     android:id="@+id/notificationcount"
+                     app:layout_constraintTop_toTopOf="parent"
+                     app:layout_constraintEnd_toEndOf="parent"
+                     android:text=""
+                     android:visibility="gone"
+                     android:translationZ="@dimen/_8sdp"
+                     android:layout_marginEnd="@dimen/_2sdp"
+                     android:layout_marginTop="@dimen/_1sdp"
+                     android:gravity="center"
+                     android:textSize="@dimen/_6sdp"
+                     android:textColor="@color/white"
+                     android:background="@drawable/notificationcountbackground"
+                     />
+
+                 <ImageView
+                     android:id="@+id/toolbsrprofileimg"
+                     android:layout_width="20dp"
+                     android:layout_height="20dp"
+                     android:src="@drawable/notification_bell"
+                     app:layout_constraintTop_toTopOf="parent"
+                     app:layout_constraintBottom_toBottomOf="parent"
+                     app:layout_constraintEnd_toStartOf="@id/toolbsrprofileimg" />
+             </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <ImageView
+                    android:id="@+id/img"
+                    android:layout_width="@dimen/_17sdp"
+                    android:layout_height="@dimen/_17sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/profile"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="@dimen/_13sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/filter"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:padding="@dimen/_5sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/filter"
+                    android:layout_marginStart="@dimen/_1sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginEnd="@dimen/_13sdp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+                <View
+                    android:layout_height="1dp"
+                    android:id="@+id/toolbarview"
+                    android:layout_width="match_parent"
+                    android:layout_marginEnd="17dp"
+                    android:layout_marginStart="15dp"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:background="#7b7776" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</layout>

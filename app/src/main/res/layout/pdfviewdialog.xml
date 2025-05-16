@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:padding="@dimen/_2sdp"
+    android:layout_marginHorizontal="20dp"
+    android:background="@drawable/bottom_sheet_layout_style">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPolicyType"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cc"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        app:layout_constraintBottom_toTopOf="@+id/cc"
+        android:textColor="@color/white"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textSize="@dimen/_12sdp"
+        android:text="HR Policy"
+        />
+    <ImageView
+       android:layout_height="@dimen/_12sdp"
+        android:layout_width="@dimen/_12sdp"
+        android:id="@+id/closeimage"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        app:layout_constraintTop_toTopOf="@+id/txtPolicyType"
+        app:layout_constraintEnd_toEndOf="@+id/cc"
+        android:src="@drawable/cancel"
+        app:tint="@color/white"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cc"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_420sdp"
+        android:layout_marginHorizontal="@dimen/_6sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/_35sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        app:layout_constraintBottom_toTopOf="@+id/downloadPdf"
+        app:layout_constraintTop_toTopOf="parent">
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </WebView>
+
+        <ImageView
+            android:id="@+id/imageview"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_350sdp"
+            android:visibility="gone"
+            android:layout_marginHorizontal="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </ImageView>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:id="@+id/downloadPdf"
+     app:layout_constraintBottom_toBottomOf="parent"
+     android:layout_marginBottom="@dimen/_12sdp"
+     android:layout_marginEnd="@dimen/_8sdp"
+     app:layout_constraintEnd_toEndOf="@+id/cc"
+     android:textColor="@color/yellow"
+     android:fontFamily="@font/montserrat_semibold"
+     android:text="Download"
+     android:gravity="center"
+     android:textSize="@dimen/_9sdp"
+     android:drawableRight="@drawable/download"
+     android:drawableTint="@color/yellow"
+     />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

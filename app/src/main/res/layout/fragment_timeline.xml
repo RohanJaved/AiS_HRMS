@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/charcoal"
+    android:id="@+id/timelinefragment"
+    tools:context=".ui.fragments.">
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintGuide_percent="0.07"
+        android:orientation="vertical"
+        android:id="@+id/leftGuideline"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/rightGuideline"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.93"
+        />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        android:text="Projects"
+        android:textSize="16dp"
+        android:textColor="#9a9594"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:id="@+id/txtProject"
+        />
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/txtProject"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        android:text="Timeline sheet"
+        android:textColor="#ffffff"
+        android:id="@+id/txtTimelinesheet"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/montserrat_semibold"
+        android:textSize="16dp"
+        />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="0dp"
+        android:layout_width="0dp"
+        android:id="@+id/rvprojecttimeline"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="@+id/leftGuideline"
+        tools:listitem="@layout/timelinesheetitem"
+        app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/txtTimelinesheet"
+        app:layout_constraintBottom_toTopOf="@+id/imgAdd"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="40dp"
+        />
+    <ImageView
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:id="@+id/imgAdd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/add"
+        app:layout_constraintEnd_toEndOf="@+id/rightGuideline"
+        android:layout_marginBottom="20dp"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

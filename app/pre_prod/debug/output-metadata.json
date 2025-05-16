@@ -1,0 +1,20 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.appinsnap.aishrm",
+  "variantName": "pre_prodDebug",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "attributes": [],
+      "versionCode": 3,
+      "versionName": "1.0.8",
+      "outputFile": "AISHRMS_V1.0.8-03091533-pre_prod-debug.apk"
+    }
+  ],
+  "elementType": "File"
+}
